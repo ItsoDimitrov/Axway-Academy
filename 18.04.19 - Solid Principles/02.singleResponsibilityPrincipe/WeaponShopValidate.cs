@@ -6,7 +6,7 @@ namespace _02.singleResponsibilityPrincipe
 {
     public abstract class WeaponShopValidate
     {
-        public bool ContainsInShop(string name, Dictionary<string,int> allWeapons)
+        protected bool ContainsInShop(string name, Dictionary<string,int> allWeapons)
         {
             if (allWeapons.ContainsKey(name))
             {

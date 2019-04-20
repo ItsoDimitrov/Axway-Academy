@@ -7,8 +7,8 @@ namespace _02.singleResponsibilityPrincipe
         static void Main(string[] args)
         {
             WeaponShop weaponShop = new WeaponShop();
-         
             weaponShop.AddToShop("asd",10);
+           
            
         }
     }

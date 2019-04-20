@@ -37,13 +37,13 @@ namespace _02.singleResponsibilityPrincipe
             //    return false;
         //}
 
-        public void WeaponsInShop()
-        {
-            foreach (var allWeapon in AllWeapons)
-            {
-                Console.WriteLine($"Weapon {allWeapon.Key} - Ammo {allWeapon.Value}");
-            }
-        }
+        //public void WeaponsInShop()
+        //{
+        //    foreach (var allWeapon in AllWeapons)
+        //    {
+        //        Console.WriteLine($"Weapon {allWeapon.Key} - Ammo {allWeapon.Value}");
+        //    }
+        //}
 
 
     }
