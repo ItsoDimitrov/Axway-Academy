@@ -10,7 +10,7 @@ namespace _01.AsynchronousCodeExample
         static void Main(string[] args)
         {
 
-            Task task = new Task(TakeMaxValueOfInt);
+            Task task = new Task(TakeMaxValueOfIntAsync);
             task.Start();
             Console.WriteLine("Im calculating but you are not blocked");
             string command = Console.ReadLine();
@@ -25,7 +25,7 @@ namespace _01.AsynchronousCodeExample
             }
         }
 
-        private static void TakeMaxValueOfInt()
+        private static void TakeMaxValueOfIntAsync()
         {
             for (int i = 0; true; i++)
             {
