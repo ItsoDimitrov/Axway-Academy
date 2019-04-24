@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "23.04.19 - Asynchronous Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.AsynchronousCodeExample", "23.04.19 - Asynchronous Programming\01.AsynchronousCodeExample\01.AsynchronousCodeExample.csproj", "{B9A85313-FC86-4110-B7FB-B53386399F17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.RaceCondition", "23.04.19 - Asynchronous Programming\02.RaceCondition\02.RaceCondition.csproj", "{8411C237-0E10-417D-8BEC-23DFE771AD31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.RaceConditionExample", "23.04.19 - Asynchronous Programming\02.RaceCondition\02.RaceConditionExample.csproj", "{8411C237-0E10-417D-8BEC-23DFE771AD31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
