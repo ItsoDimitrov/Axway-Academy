@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "23.04.19 - Asynchronous Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.AsynchronousCodeExample", "23.04.19 - Asynchronous Programming\01.AsynchronousCodeExample\01.AsynchronousCodeExample.csproj", "{B9A85313-FC86-4110-B7FB-B53386399F17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.RaceCondition", "23.04.19 - Asynchronous Programming\02.RaceCondition\02.RaceCondition.csproj", "{8411C237-0E10-417D-8BEC-23DFE771AD31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{B9A85313-FC86-4110-B7FB-B53386399F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9A85313-FC86-4110-B7FB-B53386399F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9A85313-FC86-4110-B7FB-B53386399F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8411C237-0E10-417D-8BEC-23DFE771AD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8411C237-0E10-417D-8BEC-23DFE771AD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8411C237-0E10-417D-8BEC-23DFE771AD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8411C237-0E10-417D-8BEC-23DFE771AD31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{2C40789F-97F8-4EBA-A15A-A52075E9C296} = {12CAC66E-965D-4479-B5FF-1701C01EB50B}
 		{188B46A8-6041-444A-80A7-DAB57EB7A6D3} = {12CAC66E-965D-4479-B5FF-1701C01EB50B}
 		{B9A85313-FC86-4110-B7FB-B53386399F17} = {E68BA620-0717-4C3B-9C3F-83D40DFF2758}
+		{8411C237-0E10-417D-8BEC-23DFE771AD31} = {E68BA620-0717-4C3B-9C3F-83D40DFF2758}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE4AB12D-DE56-4BAD-970B-E8A156BEA4BB}
