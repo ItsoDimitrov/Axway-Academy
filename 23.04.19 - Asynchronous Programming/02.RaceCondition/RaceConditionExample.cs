@@ -34,11 +34,15 @@ namespace _02.RaceCondition
 
         public static void RemoveFromList()
         {
-            while (_numbers.Count > 0)
+            lock (_numbers)
             {
-                int lastIndex = _numbers.Count - 1;
-                _numbers.RemoveAt(lastIndex);
+                while (_numbers.Count > 0)
+                {
+                    int lastIndex = _numbers.Count - 1;
+                    _numbers.RemoveAt(lastIndex);
+                }
             }
+            
         }
 
     }
