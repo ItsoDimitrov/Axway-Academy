@@ -1,5 +1,5 @@
 ﻿using System;
-using Axway.Database.ModelCongifuration;
+using System.Collections.Generic;
 using Axway.Database.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,7 +12,6 @@ namespace Axway.Database
         public DbSet<Course> Courses { get; set; }
         public DbSet<Grade> Grades { get; set; }
         public DbSet<Student> Students { get; set; }
-        public DbSet<StudentCourse> StudentCourses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,10 +21,6 @@ namespace Axway.Database
             }
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new StudentCourseConfiguration());
-          
-        }
+        
     }
 }
