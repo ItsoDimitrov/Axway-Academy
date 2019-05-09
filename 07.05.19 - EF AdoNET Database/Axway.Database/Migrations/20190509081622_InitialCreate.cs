@@ -78,6 +78,26 @@ namespace Axway.Database.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Courses",
+                columns: new[] { "Id", "CourseName" },
+                values: new object[] { 1, "C#" });
+
+            migrationBuilder.InsertData(
+                table: "Students",
+                columns: new[] { "Id", "Age", "Name" },
+                values: new object[] { 1, 30, "George" });
+
+            migrationBuilder.InsertData(
+                table: "Grades",
+                columns: new[] { "Id", "GradeValue", "StudentId" },
+                values: new object[] { 1, "Excellent", 1 });
+
+            migrationBuilder.InsertData(
+                table: "StudentCourse",
+                columns: new[] { "CourseId", "StudentId" },
+                values: new object[] { 1, 1 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Grades_StudentId",
                 table: "Grades",

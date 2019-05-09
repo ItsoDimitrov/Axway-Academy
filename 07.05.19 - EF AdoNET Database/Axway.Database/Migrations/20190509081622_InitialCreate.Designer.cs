@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Axway.Database.Migrations
 {
     [DbContext(typeof(AxwayContext))]
-    [Migration("20190509074852_InitialCreate")]
+    [Migration("20190509081622_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,13 @@ namespace Axway.Database.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CourseName = "C#"
+                        });
                 });
 
             modelBuilder.Entity("Axway.Database.Models.Grade", b =>
@@ -48,6 +55,14 @@ namespace Axway.Database.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("Grades");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            GradeValue = "Excellent",
+                            StudentId = 1
+                        });
                 });
 
             modelBuilder.Entity("Axway.Database.Models.Student", b =>
@@ -63,6 +78,14 @@ namespace Axway.Database.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Students");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Age = 30,
+                            Name = "George"
+                        });
                 });
 
             modelBuilder.Entity("Axway.Database.Models.StudentCourse", b =>
@@ -76,6 +99,13 @@ namespace Axway.Database.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("StudentCourse");
+
+                    b.HasData(
+                        new
+                        {
+                            CourseId = 1,
+                            StudentId = 1
+                        });
                 });
 
             modelBuilder.Entity("Axway.Database.Models.Grade", b =>

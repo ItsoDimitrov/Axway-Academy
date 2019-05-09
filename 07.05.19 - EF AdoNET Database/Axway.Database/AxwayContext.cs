@@ -26,23 +26,30 @@ namespace Axway.Database
         {
             modelBuilder.ApplyConfiguration(new StudentCourseConfiguration());
             modelBuilder.Entity<Course>()
-                .HasData(new Course()
+                .HasData(new Course
                 {
                     Id = 1,
                     CourseName = "C#"
                 });
             modelBuilder.Entity<Student>()
-                .HasData(new Student()
+                .HasData(new Student
                 {
                     Id = 1,
-                    Age = 20,
-                    Name = "Ivan"
+                    Age = 30,
+                    Name = "George"
 
+                });
+            modelBuilder.Entity<Grade>()
+                .HasData(new Grade()
+                {
+                    Id = 1,
+                    StudentId = 1,
+                    GradeValue = "Excellent"
                 });
             modelBuilder.Entity<StudentCourse>()
                 .HasData(new StudentCourse()
                 {
-                        CourseId = 1,
+                    CourseId = 1,
                     StudentId = 1
                 });
         }

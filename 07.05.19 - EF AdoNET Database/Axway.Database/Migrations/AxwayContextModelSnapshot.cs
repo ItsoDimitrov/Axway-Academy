@@ -53,6 +53,14 @@ namespace Axway.Database.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("Grades");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            GradeValue = "Excellent",
+                            StudentId = 1
+                        });
                 });
 
             modelBuilder.Entity("Axway.Database.Models.Student", b =>
@@ -73,8 +81,8 @@ namespace Axway.Database.Migrations
                         new
                         {
                             Id = 1,
-                            Age = 20,
-                            Name = "Ivan"
+                            Age = 30,
+                            Name = "George"
                         });
                 });
 
