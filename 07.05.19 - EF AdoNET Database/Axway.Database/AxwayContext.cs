@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Axway.Database.ModelConfigurations;
 using Axway.Database.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,29 @@ namespace Axway.Database
             }
         }
 
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new StudentCourseConfiguration());
+            modelBuilder.Entity<Course>()
+                .HasData(new Course()
+                {
+                    Id = 1,
+                    CourseName = "C#"
+                });
+            modelBuilder.Entity<Student>()
+                .HasData(new Student()
+                {
+                    Id = 1,
+                    Age = 20,
+                    Name = "Ivan"
+
+                });
+            modelBuilder.Entity<StudentCourse>()
+                .HasData(new StudentCourse()
+                {
+                        CourseId = 1,
+                    StudentId = 1
+                });
+        }
     }
 }

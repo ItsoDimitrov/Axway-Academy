@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Axway.Database.Migrations
 {
     [DbContext(typeof(AxwayContext))]
-    [Migration("20190508185225_InitialCreate")]
+    [Migration("20190509074852_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,11 +28,7 @@ namespace Axway.Database.Migrations
 
                     b.Property<string>("CourseName");
 
-                    b.Property<int>("StudentId");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("StudentId");
 
                     b.ToTable("Courses");
                 });
@@ -69,18 +65,36 @@ namespace Axway.Database.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("Axway.Database.Models.Course", b =>
+            modelBuilder.Entity("Axway.Database.Models.StudentCourse", b =>
                 {
-                    b.HasOne("Axway.Database.Models.Student", "Student")
-                        .WithMany("Courses")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                    b.Property<int>("CourseId");
+
+                    b.Property<int>("StudentId");
+
+                    b.HasKey("CourseId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("StudentCourse");
                 });
 
             modelBuilder.Entity("Axway.Database.Models.Grade", b =>
                 {
                     b.HasOne("Axway.Database.Models.Student", "Student")
                         .WithMany("Grades")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Axway.Database.Models.StudentCourse", b =>
+                {
+                    b.HasOne("Axway.Database.Models.Course", "Course")
+                        .WithMany("StudentCourses")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Axway.Database.Models.Student", "Student")
+                        .WithMany("StudentCourses")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

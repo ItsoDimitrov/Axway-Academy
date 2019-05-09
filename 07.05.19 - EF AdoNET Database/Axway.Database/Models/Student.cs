@@ -8,7 +8,7 @@ namespace Axway.Database.Models
     {
         public Student()
         {
-            this.Courses = new HashSet<Course>();
+            this.StudentCourses = new HashSet<StudentCourse>();
             this.Grades = new HashSet<Grade>();
         }
 
@@ -16,6 +16,6 @@ namespace Axway.Database.Models
         public string Name { get; set; }
         public int Age { get; set; }
         public ICollection<Grade> Grades { get; set; }
-        public ICollection<Course> Courses { get; set; }
+        public ICollection<StudentCourse> StudentCourses { get; set; }
     }
 }
