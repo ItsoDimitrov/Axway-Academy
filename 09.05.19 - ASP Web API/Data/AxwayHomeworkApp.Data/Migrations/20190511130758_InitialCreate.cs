@@ -16,7 +16,7 @@ namespace AxwayHomeworkApp.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
                     ReleaseDate = table.Column<DateTime>(nullable: true),
-                    Genre = table.Column<int>(nullable: false)
+                    Genre = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

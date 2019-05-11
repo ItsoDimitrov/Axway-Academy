@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AxwayHomeworkApp.Data.Migrations
 {
     [DbContext(typeof(AxwayHomeworkAppContext))]
-    [Migration("20190511120616_InitialCreate")]
+    [Migration("20190511130758_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,7 +27,7 @@ namespace AxwayHomeworkApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Genre");
+                    b.Property<string>("Genre");
 
                     b.Property<string>("Name")
                         .IsRequired();

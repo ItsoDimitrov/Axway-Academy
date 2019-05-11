@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using AxwayHomeworkApp.Models.Enums;
 
 namespace AxwayHomeworkApp.Models
 {
@@ -10,7 +9,7 @@ namespace AxwayHomeworkApp.Models
         [Required]
         public string Name { get; set; }
         public DateTime? ReleaseDate { get; set; }
-        public Genre Genre { get; set; }
+        public string Genre { get; set; }
 
     }
 }

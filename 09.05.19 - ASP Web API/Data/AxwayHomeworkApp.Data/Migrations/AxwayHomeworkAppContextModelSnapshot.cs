@@ -25,7 +25,7 @@ namespace AxwayHomeworkApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Genre");
+                    b.Property<string>("Genre");
 
                     b.Property<string>("Name")
                         .IsRequired();
