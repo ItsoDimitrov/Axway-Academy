@@ -66,16 +66,40 @@ namespace AxwayHomeworkApp.Controllers
             return StatusCode(400);
         }
 
-        // PUT api/<controller>/5
+        // PUT api/<controller>/id
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public ActionResult<Game> Modify(int id, [FromBody]Game game) // Modify
         {
+            var isExist = this._context.Games.Any(g => g.Id == id);
+            if (!isExist)
+            {
+                return StatusCode(404);
+
+            }
+
+            var gameToModify = this._context.Games.FirstOrDefault(g => g.Id == id);
+            gameToModify.Name = game.Name;
+            gameToModify.Genre = game.Genre;
+            gameToModify.ReleaseDate = game.ReleaseDate;
+            _context.SaveChanges();
+            return NoContent();
+
+
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<Game> DeleteGame(int id)
         {
+            var gameToDelete = this._context.Games.FirstOrDefault(g => g.Id == id);
+            if (gameToDelete == null)
+            {
+                return StatusCode(404);
+            }
+
+            this._context.Games.Remove(gameToDelete);
+            this._context.SaveChanges();
+            return NoContent();
         }
     }
 }
