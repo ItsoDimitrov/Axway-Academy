@@ -1,0 +1,11 @@
+GET 
+-- https://localhost:5001/api/game/all (List All Avalilable Games)
+-- https://localhost:5001/api/game/byname/Dead Space 3 (List game by given game name. If game doesn’t exist, status 404 must be returned to the user.)
+-- https://localhost:5001/api/game/17 (List game by given game ID. If game doesn’t exist, status 404 must be returned to the user)
+
+PUT
+-- https://localhost:5001/api/game/19 (Modify the whole game. If game doesn’t exist, status 404 must be returned to the user.)
+
+DELETE
+-- https://localhost:5001/api/game/19 (Delete existing game. If game doesn’t exist, status 404 must be returned to the user.)
+
