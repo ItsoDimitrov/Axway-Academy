@@ -27,10 +27,15 @@ namespace AxwayHomeworkApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AxwayHomeworkAppContext>(options =>
-                
-                    options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
-                
+            //services.AddDbContext<AxwayHomeworkAppContext>(options =>
+
+            //    options.UseSqlServer(
+            //        this.Configuration.GetConnectionString("DefaultConnection")));
+            //options.UseSqlServer(
+            //    "Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Trusted_Connection=True;MultipleActiveResultSets=true"
+            //));
+
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
