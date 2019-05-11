@@ -35,8 +35,9 @@ namespace AxwayHomeworkApp
             //    ""Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Integrated Security=True;""
             //));
 
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +55,13 @@ namespace AxwayHomeworkApp
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Games}/{action=Index}/{id?}"
+            //    );
+            //});
         }
     }
 }

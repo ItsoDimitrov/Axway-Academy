@@ -44,14 +44,16 @@ namespace Sandbox
                 var gameTitle = document.QuerySelector(".content-wrapper h2:nth-child(3)").TextContent;
                 if (!string.IsNullOrEmpty(gameGenre) && !string.IsNullOrEmpty(gameTitle))
                 {
+                    
                     var game = db.Games.FirstOrDefault(g => g.Name == gameTitle);
                     if (game == null)
                     {
+                        Console.WriteLine($"Game Title {gameTitle}\n Game Genre {gameGenre}");
                         game = new Game
                         {
-                            Name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(gameTitle.ToLower()),
+                            Name = gameTitle,
                             Genre = gameGenre,
-                            ReleaseDate = DateTime.UtcNow
+                            ReleaseDate = DateTime.UtcNow 
 
                         };
                     }
