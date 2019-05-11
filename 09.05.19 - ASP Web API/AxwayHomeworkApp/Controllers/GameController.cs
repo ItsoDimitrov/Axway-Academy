@@ -52,8 +52,18 @@ namespace AxwayHomeworkApp.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public ActionResult<Game> CreateGame([FromBody] Game game)
         {
+            var isExist = this._context.Games.Any(g => g.Name == game.Name);
+            if (!isExist)
+            {
+                this._context.Add(game);
+                this._context.SaveChanges();
+                return CreatedAtAction(nameof(AllGames), new { id = game.Id }, game);
+
+            }
+
+            return StatusCode(400);
         }
 
         // PUT api/<controller>/5
