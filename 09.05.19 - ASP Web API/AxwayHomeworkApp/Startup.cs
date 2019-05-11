@@ -35,7 +35,10 @@ namespace AxwayHomeworkApp
             //    ""Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Integrated Security=True;""
             //));
 
-            
+            services.AddDbContext<AxwayHomeworkAppContext>(options =>
+                options.UseSqlServer(
+                    "Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Integrated Security=True;"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
         }
@@ -54,12 +57,13 @@ namespace AxwayHomeworkApp
             }
 
             app.UseHttpsRedirection();
+
             app.UseMvc();
             //app.UseMvc(routes =>
             //{
             //    routes.MapRoute(
             //        name: "default",
-            //        template: "{controller=Games}/{action=Index}/{id?}"
+            //        template: "api/{controller}/{action}/{id}"
             //    );
             //});
         }
