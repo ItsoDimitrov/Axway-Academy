@@ -30,7 +30,7 @@ namespace Axway
                 {
                     while (reader.Read())
                     {
-                        Console.WriteLine(reader);
+                        Console.WriteLine(reader[0]);
                     }
                 }
             }
