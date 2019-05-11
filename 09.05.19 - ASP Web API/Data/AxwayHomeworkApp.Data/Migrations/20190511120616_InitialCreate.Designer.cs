@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AxwayHomeworkApp.Data.Migrations
 {
     [DbContext(typeof(AxwayHomeworkAppContext))]
-    [Migration("20190511114233_InitialCreate")]
+    [Migration("20190511120616_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

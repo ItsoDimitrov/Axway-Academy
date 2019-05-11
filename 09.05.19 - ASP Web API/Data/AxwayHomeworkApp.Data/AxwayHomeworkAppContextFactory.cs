@@ -24,10 +24,10 @@ namespace AxwayHomeworkApp.Data
             var builder = new DbContextOptionsBuilder<AxwayHomeworkAppContext>();
 
             var connectionString =
-                @"Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Trusted_Connection=True;MultipleActiveResultSets=true";
+                "Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Integrated Security=True;";
 
 
-            //var connectionString = "Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Trusted_Connection=True;MultipleActiveResultSets=true";
+            //var connectionString = "Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Integrated Security=True;";
 
 
 

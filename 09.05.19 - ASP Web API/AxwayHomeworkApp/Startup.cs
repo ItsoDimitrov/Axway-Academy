@@ -32,7 +32,7 @@ namespace AxwayHomeworkApp
             //    options.UseSqlServer(
             //        this.Configuration.GetConnectionString("DefaultConnection")));
             //options.UseSqlServer(
-            //    "Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Trusted_Connection=True;MultipleActiveResultSets=true"
+            //    ""Server=DESKTOP-F8FBRNH\\SQLEXPRESS;Database=AxwayHomeworkApp;Integrated Security=True;""
             //));
 
 
