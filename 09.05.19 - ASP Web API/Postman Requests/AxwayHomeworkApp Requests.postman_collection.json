@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "d29dd2bd-5dfd-4051-8ac5-90078227d824",
+		"name": "AxwayHomeworkApp Requests",
+		"description": "Requests for web api homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "POST create game",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"Dota2\",\n\t\"Genre\": \"MMO\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/game",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"game"
+							]
+						},
+						"description": "Adds new game. If game with the same name already exists, status 400 must be returned to the user."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET All Games",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/game/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"game",
+								"all"
+							]
+						},
+						"description": "List All Avalilable Games"
+					},
+					"response": []
+				},
+				{
+					"name": "GET game by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/game/byname/Dead%20Space%203",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"game",
+								"byname",
+								"Dead%20Space%203"
+							]
+						},
+						"description": "List game by given game name. If game doesn’t exist, status 404 must be returned to the user."
+					},
+					"response": []
+				},
+				{
+					"name": "GET game by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 9,\n    \"name\": \"Dead Space 2\",\n    \"releaseDate\": \"2019-05-11T13:12:13.1753543\",\n    \"genre\": \"ACTION\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/game/17",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"game",
+								"17"
+							]
+						},
+						"description": "List game by given game ID. If game doesn’t exist, status 404 must be returned to the user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "PUT modify game",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"name\":\"Dead Space 4\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/game/19",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"game",
+								"19"
+							]
+						},
+						"description": "Modify the whole game. If game doesn’t exist, status 404 must be returned to the user."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Delete game",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/game/19",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"game",
+								"19"
+							]
+						},
+						"description": "Delete existing game. If game doesn’t exist, status 404 must be returned to the user."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
