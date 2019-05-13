@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Text;
 using AngleSharp;
-using AngleSharp.Dom;
 using AxwayHomeworkApp.Data;
 using AxwayHomeworkApp.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Sandbox

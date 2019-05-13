@@ -1,5 +1,4 @@
-﻿using System;
-using AxwayHomeworkApp.Models;
+﻿using AxwayHomeworkApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace AxwayHomeworkApp.Data
