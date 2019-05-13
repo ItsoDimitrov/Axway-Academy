@@ -29,7 +29,7 @@ namespace Sandbox
         private static void SandboxCode(IServiceProvider serviceProvider)
         {
             var db = serviceProvider.GetService<AxwayHomeworkAppContext>();
-           // Using Anglesharp 
+           // Using Anglesharp for seeding data in database 
             var config = Configuration.Default.WithDefaultLoader();
             var context = BrowsingContext.New(config);
             for (int i = 2; i <= 9; i++)
