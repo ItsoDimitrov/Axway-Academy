@@ -16,7 +16,7 @@ namespace Homework.Tests
        
 
         [Fact]
-        public void ItemsCount_ShouldReturnZero_IfThereIsNoItems()
+        public void ItemsCount_ShouldReturnZero_IfThereIsNoProducts()
         {
             var storeItemsCount = _store.ItemsCount();
             var expected = 0;
@@ -32,6 +32,18 @@ namespace Homework.Tests
             var expected = 2;
             Assert.Equal(expected,storeItemsCount);
 
+        }
+
+        [Fact]
+        public void GetAllProducts_ShouldReturnAllProducts_IfNoEmptyStore()
+        {
+            _store.AddItem("Ak47");
+            _store.AddItem("M4A4");
+            _store.AddItem("Black Eagle");
+            _store.AddItem("Knight MK-85");
+            var expected = "";
+            Assert.Equal(expected,_store.GetAllProducts);
+            
         }
     }
 }

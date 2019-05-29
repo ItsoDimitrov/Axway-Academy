@@ -21,6 +21,10 @@ namespace HomeworkProgram
 
         public void AddItem(string product)
         {
+            if (product.GetType().Name != "String")
+            {
+                throw new NotSupportedException();
+            }
             Items.Add(product);
         }
         
