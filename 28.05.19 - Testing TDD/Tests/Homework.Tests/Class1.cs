@@ -4,5 +4,6 @@ namespace Homework.Tests
 {
     public class Class1
     {
+
     }
 }
