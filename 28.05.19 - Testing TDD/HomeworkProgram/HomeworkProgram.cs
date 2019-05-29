@@ -2,11 +2,12 @@
 
 namespace HomeworkProgram
 {
-    class Program
+    public class HomeworkProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
+
 }

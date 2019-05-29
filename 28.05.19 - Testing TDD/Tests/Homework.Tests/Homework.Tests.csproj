@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\HomeworkProgram\HomeworkProgram.csproj" />
+  </ItemGroup>
+
 </Project>
