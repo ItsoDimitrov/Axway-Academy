@@ -27,6 +27,10 @@ namespace HomeworkProgram
             }
             Items.Add(product);
         }
-        
+
+        public string GetAllProducts()
+        {
+            return string.Join(",", Items);
+        }
     }
 }

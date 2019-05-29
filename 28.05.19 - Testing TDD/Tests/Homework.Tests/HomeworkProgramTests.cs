@@ -41,8 +41,9 @@ namespace Homework.Tests
             _store.AddItem("M4A4");
             _store.AddItem("Black Eagle");
             _store.AddItem("Knight MK-85");
-            var expected = "";
-            Assert.Equal(expected,_store.GetAllProducts);
+            var actual = _store.GetAllProducts();
+            var expected = "Ak47,M4A4,Black Eagle,Knight MK-85";
+            Assert.Equal(expected,actual);
             
         }
     }
