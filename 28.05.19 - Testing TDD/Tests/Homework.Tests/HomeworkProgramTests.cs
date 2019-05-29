@@ -16,10 +16,21 @@ namespace Homework.Tests
        
 
         [Fact]
-        public void ItemsCount_ReturnZero_IfThereIsNoItems()
+        public void ItemsCount_ShouldReturnZero_IfThereIsNoItems()
         {
             var storeItemsCount = _store.ItemsCount();
-            Assert.Equal(0,storeItemsCount);
+            var expected = 0;
+            Assert.Equal(expected,storeItemsCount);
+
+        }
+        [Fact]
+        public void AddItem_ShouldAddItem_IfGivenDataTypeIsCorrect()
+        {
+            _store.AddItem("Ak47");
+            _store.AddItem("M4A4");
+            var storeItemsCount = _store.ItemsCount();
+            var expected = 2;
+            Assert.Equal(expected,storeItemsCount);
 
         }
     }
