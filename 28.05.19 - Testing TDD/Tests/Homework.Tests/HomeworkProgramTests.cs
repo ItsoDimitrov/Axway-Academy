@@ -11,7 +11,7 @@ namespace Homework.Tests
         private Store _store;
         public HomeworkProgramTests()
         {
-            _store = new Store();
+            _store = new Store(new List<string>());
         }
        
 

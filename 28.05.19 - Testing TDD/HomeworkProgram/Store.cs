@@ -6,11 +6,17 @@ namespace HomeworkProgram
 {
     public class Store
     {
-        public Store() { }
+        public List<string> Items { get; set; }
+
+        public Store(List<string> items)
+        {
+            Items = items;
+        }
 
         public int ItemsCount()
         {
-            throw  new NotImplementedException();
+            var itemsInStore = Items.Count;
+            return itemsInStore;
         }
         
     }
