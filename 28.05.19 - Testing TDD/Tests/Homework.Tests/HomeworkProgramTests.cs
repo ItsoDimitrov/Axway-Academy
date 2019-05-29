@@ -46,5 +46,12 @@ namespace Homework.Tests
             Assert.Equal(expected,actual);
             
         }
+        [Fact]
+        public void GetAllProducts_ShouldReturnMessage_IfStoreIsEmpty()
+        {
+            var actual = _store.GetAllProducts();
+            var expected = "Empty Store, sorry";
+            Assert.Equal(expected,actual);
+        }
     }
 }

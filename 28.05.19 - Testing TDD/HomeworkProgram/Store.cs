@@ -30,7 +30,13 @@ namespace HomeworkProgram
 
         public string GetAllProducts()
         {
-            return string.Join(",", Items);
+            if (this.Items.Count > 0)
+            {
+                return string.Join(",", Items);
+
+            }
+
+            return "Empty Store, sorry";
         }
     }
 }
