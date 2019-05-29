@@ -18,6 +18,11 @@ namespace HomeworkProgram
             var itemsInStore = Items.Count;
             return itemsInStore;
         }
+
+        public void AddItem(string product)
+        {
+            Items.Add(product);
+        }
         
     }
 }
